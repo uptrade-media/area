@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge.jsx'
 import { Building2, Phone, Mail, MapPin, DollarSign, TrendingUp, Users, Award, Handshake, Landmark, Scale, Lightbulb, CheckCircle, Quote, Globe, Briefcase, DollarSign as DollarSignIcon, FileText, Banknote, RefreshCcw, Home, Target, TrendingUpIcon, ShieldCheck, Zap, UserCheck, BriefcaseBusiness, PiggyBank, BarChart3, MessageSquareText, CalendarCheck, ShoppingCart, Building, Star, Clock, Calculator, Percent, User, Shield, Menu, X } from 'lucide-react'
 import './App.css'
 
-function Home() {
+function HomePage() {
   const [activeSection, setActiveSection] = useState('home')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
