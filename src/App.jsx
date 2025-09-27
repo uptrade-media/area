@@ -4351,7 +4351,7 @@ function App() {
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <img src="/Logonotextwhite.png" alt="Adams Real Estate Advisors Logo" className="h-8 w-8 mr-3" />
+              <img src="/Logonotextwhite.svg" alt="Adams Real Estate Advisors Logo" className="h-8 w-8 mr-3" />
               <h3 className="text-xl font-bold">Adams Real Estate Advisors</h3>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
