@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from "react";
 import * as Popover from "@radix-ui/react-popover";
 import { ChevronLeft, ChevronRight, Calendar as CalendarIcon } from "lucide-react";
