@@ -149,16 +149,11 @@
   animation: slideUp 0.8s ease-out;
 }
 
-/* Enhanced hero section with subtle background animation */
+/* Enhanced hero section */
 .hero-background {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  transition: all 0.3s ease-in-out;
-}
-
-.hero-background:hover {
-  transform: scale(1.02);
 }
 
 /* Smooth transitions for all interactive elements */

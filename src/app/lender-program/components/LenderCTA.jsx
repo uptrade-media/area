@@ -2,59 +2,78 @@
 
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Mail } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 export default function LenderCTA() {
   return (
-    <section className="py-20 md:py-24 bg-gradient-to-br from-[#081c3e] to-[#0a2347]">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Join Our Lender Network
-          </h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
-            Ready to expand your commercial real estate loan portfolio? Let's discuss how partnering with Adams Real Estate Advisors can grow your business.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+    <section className="py-24 md:py-32 bg-gray-50 relative overflow-hidden">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Main CTA Card */}
+        <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+          <div className="p-8 md:p-12 lg:p-16 text-center">
+            <div className="inline-flex items-center gap-3 mb-6">
+              <div className="h-px w-8 bg-[#b9945a]" />
+              <span className="text-[#b9945a] font-medium tracking-widest uppercase text-xs">Begin Partnership</span>
+              <div className="h-px w-8 bg-[#b9945a]" />
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#081c3e] mb-6 tracking-tight">
+              Explore a Partnership with AREA
+            </h2>
+            <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+              We welcome conversations with capital providers interested in accessing institutional-quality commercial real estate opportunities.
+            </p>
+            
             <Link href="/contact">
               <Button 
                 size="lg"
-                className="bg-[#b9945a] hover:bg-[#a5834f] text-white px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all group"
+                className="bg-[#b9945a] hover:bg-[#a5834f] text-white px-10 py-7 text-lg font-medium shadow-lg hover:shadow-xl transition-all group"
               >
-                Apply to Partner
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                Inquire About Partnership
+                <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <a href="mailto:info@adamsrealestateadvisors.com">
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-[#081c3e] px-8 py-6 text-lg font-semibold transition-all"
-              >
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </Button>
-            </a>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 max-w-3xl mx-auto">
-            <h3 className="text-xl font-bold mb-6">Application Process</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div>
-                <div className="text-3xl font-bold text-[#b9945a] mb-2">1</div>
-                <div className="font-semibold mb-2">Submit Information</div>
-                <div className="text-sm text-gray-300">Company overview, lending programs, and contact details</div>
+          {/* Simple 3-step process - integrated at bottom */}
+          <div className="bg-gradient-to-br from-gray-50 to-white px-8 py-12 md:px-12 md:py-16 border-t border-gray-100">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 max-w-3xl mx-auto">
+              <div className="flex items-center gap-4">
+                <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[#b9945a]/10 border border-[#b9945a]/20">
+                  <span className="text-[#b9945a] font-semibold text-sm">01</span>
+                </div>
+                <div className="text-left">
+                  <h3 className="font-semibold text-[#081c3e] text-sm mb-0.5">Introduction</h3>
+                  <p className="text-xs text-gray-600">Share criteria</p>
+                </div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-[#b9945a] mb-2">2</div>
-                <div className="font-semibold mb-2">Initial Discussion</div>
-                <div className="text-sm text-gray-300">Phone call to discuss lending criteria and partnership fit</div>
+              
+              <div className="hidden md:block">
+                <ArrowRight className="h-5 w-5 text-gray-300" />
               </div>
-              <div>
-                <div className="text-3xl font-bold text-[#b9945a] mb-2">3</div>
-                <div className="font-semibold mb-2">Start Receiving Deals</div>
-                <div className="text-sm text-gray-300">Begin receiving qualified loan opportunities matching your criteria</div>
+              
+              <div className="flex items-center gap-4">
+                <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[#b9945a]/10 border border-[#b9945a]/20">
+                  <span className="text-[#b9945a] font-semibold text-sm">02</span>
+                </div>
+                <div className="text-left">
+                  <h3 className="font-semibold text-[#081c3e] text-sm mb-0.5">Alignment</h3>
+                  <p className="text-xs text-gray-600">Discuss fit</p>
+                </div>
+              </div>
+              
+              <div className="hidden md:block">
+                <ArrowRight className="h-5 w-5 text-gray-300" />
+              </div>
+              
+              <div className="flex items-center gap-4">
+                <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[#b9945a]/10 border border-[#b9945a]/20">
+                  <span className="text-[#b9945a] font-semibold text-sm">03</span>
+                </div>
+                <div className="text-left">
+                  <h3 className="font-semibold text-[#081c3e] text-sm mb-0.5">Collaboration</h3>
+                  <p className="text-xs text-gray-600">Receive deals</p>
+                </div>
               </div>
             </div>
           </div>

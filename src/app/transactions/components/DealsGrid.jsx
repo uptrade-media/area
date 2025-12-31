@@ -40,9 +40,9 @@ export default function DealsGrid() {
   const filteredDeals = filter === 'All' ? deals : deals.filter(deal => deal.category === filter)
 
   return (
-    <section className="py-20 md:py-24 bg-gray-50">
+    <section className="bg-gray-50 pb-20 md:pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 pt-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#081c3e] mb-6">
             Featured Transactions
           </h2>
@@ -70,17 +70,20 @@ export default function DealsGrid() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredDeals.map((deal, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 group bg-white">
+            <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 group bg-white p-0">
               <div className="relative h-48 bg-gray-200 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
                 <Badge className={`absolute top-4 left-4 z-20 ${getTypeColor(deal.type)}`}>
                   {deal.type}
                 </Badge>
+                <Image
+                  src={deal.image}
+                  alt={deal.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
                 <div className="absolute inset-0 bg-[#081c3e] opacity-0 group-hover:opacity-20 transition-opacity z-10" />
-                {/* Image placeholder - would use next/image with proper dimensions */}
-                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-400">
-                  <Building2 className="h-16 w-16 text-gray-500 opacity-50" />
-                </div>
               </div>
               
               <CardContent className="p-6">
